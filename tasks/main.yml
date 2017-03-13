@@ -49,7 +49,12 @@
 #    path: /usr/src/netdata
 #    state: absent
 
-
+- lineinfile:
+    dest: /etc/netdata/netdata.conf
+    regexp: '^\t history = *'
+    line: '\t history = 7200'
+    backrefs: yes
+    
 #Optional: use your own registry
 - lineinfile:
     dest: /etc/netdata/netdata.conf
