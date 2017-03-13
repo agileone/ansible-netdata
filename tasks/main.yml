@@ -59,7 +59,7 @@
 - lineinfile:
     dest: /etc/netdata/netdata.conf
     regexp: '^\t# registry to announce.*'
-    line: '\t registry to announce = http://your-registry-server.comp.tld:19999'
+    line: '\t registry to announce = http://netdata-registry.agilitae.com:19999'
     backrefs: yes
 
 #Optional: Disable notifications
